@@ -2,9 +2,7 @@
 #include <locale.h>
 #include <string.h>
 
-// printf("\n      -----ATENCAO!----- FUNCIONALIDADE AINDA NAO IMPLEMENTADA!!!\n");
-
-// declaro struct antes da funÁ„o
+// declaro struct antes da fun√ß√£o
 
 struct verboirreg {
 	char verboi[50], ireu[50], irtu[50], irelx[50], irnos[50], irvos[50], irelxs[50];
@@ -29,9 +27,9 @@ int preencha(struct verboirreg entra[], int j){
 
 int procurar_verbo(struct verboirreg entrada[], char *verbo, int j) {
 	
-   // para eu chamar o cjgd eu tive que usar o fato de que ele È um vetor
+   // para eu chamar o cjgd eu tive que usar o fato de que ele √© um vetor
    
-   // criei uma vari·vel "encontrado" como base e utilizei mÈtodo normal de pesquisa
+   // criei uma vari√°vel "encontrado" como base e utilizei m√©todo normal de pesquisa
     int encontrado = -1;
     for (int i = 0; i <= j; i++) {
         if (strcmp(verbo, entrada[i].verboi) == 0) {
@@ -67,10 +65,10 @@ void vetorir (struct verboirreg entra[], int j, int tam, char verbo[]){
 					printf("\nEle(a) ");
 					fflush(stdin);
 					gets(entra[j].irelx);
-					printf("\nNÛs ");
+					printf("\nN√≥s ");
 					fflush(stdin);
 					gets(entra[j].irnos);
-					printf("\nVÛs ");
+					printf("\nV√≥s ");
 					fflush(stdin);
 					gets(entra[j].irvos);
 					printf("\nEles(a) ");
@@ -81,8 +79,8 @@ void vetorir (struct verboirreg entra[], int j, int tam, char verbo[]){
 					printf("\n                 Eu %s", entra[j].ireu);
 					printf("\n                 Tu %s", entra[j].irtu);
 					printf("\n                 Ele(a) %s", entra[j].irelx);
-					printf("\n                 NÛs %s", entra[j].irnos);
-					printf("\n                 VÛs %s", entra[j].irvos);
+					printf("\n                 N√≥s %s", entra[j].irnos);
+					printf("\n                 V√≥s %s", entra[j].irvos);
 					printf("\n                 Eles(as) %s\n", entra[j].irelxs);
 				
 				
@@ -113,8 +111,8 @@ int conjuga_ca (char *radical){
 		printf("\n                 Eu %so", radical);
 		printf("\n                 Tu %sas", radical);
 		printf("\n                 Ele(a) %sa", radical);
-		printf("\n                 NÛs %samos", radical);
-		printf("\n                 VÛs %sais", radical);
+		printf("\n                 N√≥s %samos", radical);
+		printf("\n                 V√≥s %sais", radical);
 		printf("\n                 Eles(as) %sam\n", radical);
 }
 
@@ -122,8 +120,8 @@ int conjuga_ce (char *radical){
 		printf("\n                 Eu %so", radical);
 		printf("\n                 Tu %ses", radical);
 		printf("\n                 Ele(a) %se", radical);
-		printf("\n                 NÛs %semos", radical);
-		printf("\n                 VÛs %seis", radical);
+		printf("\n                 N√≥s %semos", radical);
+		printf("\n                 V√≥s %seis", radical);
 		printf("\n                 Eles(as) %sem\n", radical);
 }
 
@@ -131,8 +129,8 @@ int conjuga_ci (char *radical){
 		printf("\n                 Eu %so", radical);
 		printf("\n                 Tu %ses", radical);
 		printf("\n                 Ele(a) %se", radical);
-		printf("\n                 NÛs %simos", radical);
-		printf("\n                 VÛs %sis", radical);
+		printf("\n                 N√≥s %simos", radical);
+		printf("\n                 V√≥s %sis", radical);
 		printf("\n                 Eles(as) %sem\n", radical);
 }
 
@@ -140,8 +138,8 @@ int conjuga_co (char *radical){
 	printf("\n                 Eu %sonho", radical);
 		printf("\n                 Tu %soes", radical);
 		printf("\n                 Ele(a) %soe", radical);
-		printf("\n                 NÛs %somos", radical);
-		printf("\n                 VÛs %sondes", radical);
+		printf("\n                 N√≥s %somos", radical);
+		printf("\n                 V√≥s %sondes", radical);
 		printf("\n                 Eles(as) %soem\n", radical);
 }
 
@@ -175,7 +173,7 @@ for(int p=0; p<j; p++){
 			int veja = procurar_verbo(cjgd,verbo,j);
 			
 			
-		// parte dos cÛdigos da conjugaÁ„o
+		// parte dos c√≥digos da conjuga√ß√£o
 		if (veja == -1){
 		
 			tam = strlen(verbo);
@@ -220,7 +218,7 @@ for(int p=0; p<j; p++){
 					
 				}
 				
-				printf("\n\nA ConjugaÁ„o est· correta?\n[S]im ou [N]„o\nDigite e tecle <Enter>");
+				printf("\n\nA Conjuga√ß√£o est√° correta?\n[S]im ou [N]√£o\nDigite e tecle <Enter>");
 				fflush(stdin);
 				scanf("%c", &correcao);
 				getchar();
@@ -241,11 +239,11 @@ for(int p=0; p<j; p++){
 					printf("\n                 Eu %s", cjgd[veja].ireu);
 					printf("\n                 Tu %s", cjgd[veja].irtu);
 					printf("\n                 Ele(a) %s", cjgd[veja].irelx);
-					printf("\n                 NÛs %s", cjgd[veja].irnos);
-					printf("\n                 VÛs %s", cjgd[veja].irvos);
+					printf("\n                 N√≥s %s", cjgd[veja].irnos);
+					printf("\n                 V√≥s %s", cjgd[veja].irvos);
 					printf("\n                 Eles(as) %s\n", cjgd[veja].irelxs);
 					
-					printf("\n\n                 PosiÁ„o da struct %d\n", veja);
+					printf("\n\n                 Posi√ß√£o da struct %d\n", veja);
 					
 		}
 				
@@ -253,9 +251,9 @@ for(int p=0; p<j; p++){
 					
 			printf("\n");
 			
-		// codigos da conjugaÁ„o
+		// codigos da conjuga√ß√£o
 		
-			printf("      -----OpÁıes:\n           (C)onjugar outro verbo\n           Qualquer outra letra pra Sair do programa\n           Escolha e tecle <Enter>");
+			printf("      -----Op√ß√µes:\n           (C)onjugar outro verbo\n           Qualquer outra letra pra Sair do programa\n           Escolha e tecle <Enter>");
 			scanf("%c", &op);
 			getchar();
 			
@@ -271,5 +269,6 @@ for(int p=0; p<j; p++){
 	
 	return 0;
 }
+
 
 
